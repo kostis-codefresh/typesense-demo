@@ -1,1 +1,39 @@
-<h1>Typesense search demo</h1>
+<html>
+    <head>
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css"
+      />
+
+    </head>
+
+<body>
+
+    <h1>Typesense search demo</h1>
+
+
+    <p>Search Codefresh v2 docs</p>
+    <input type="search" id="searchbar">
+
+
+    <!-- Before the closing body -->
+<script src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
+
+<script>
+  docsearch({
+    inputSelector: '#searchbar',
+    typesenseCollectionName: 'codefresh-csdp_1643882149', // Should match the collection name you mention in the docsearch scraper config.js
+    typesenseServerConfig: { 
+      nodes: [{
+        host: 'tvb98p4yqaxh0o6gp-1.a1.typesense.net', // For Typesense Cloud use xxx.a1.typesense.net
+        port: '443',      // For Typesense Cloud use 443
+        protocol: 'https'   // For Typesense Cloud use https
+      }],
+      apiKey: 'Ov5PtjsFodjFhRxQfPlcMQg2CrpHJ0Wf', // Use API Key with only Search permissions
+    },
+  });
+</script>
+</body>
+</html>
+
